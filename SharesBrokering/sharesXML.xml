@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Shares>
+    <Share>
+        <companyName>Apple</companyName>
+        <companySymbol>AAPL</companySymbol>
+        <availableShares>66090446</availableShares>
+        <sharePrice>
+            <currency>GBP</currency>
+            <value>157.0</value>
+            <lastUpdate>2018-01-30Z</lastUpdate>
+        </sharePrice>
+    </Share>
+    <Share>
+        <companyName>Microsoft</companyName>
+        <companySymbol>MSFT</companySymbol>
+        <availableShares>42253469</availableShares>
+        <sharePrice>
+            <currency>GBP</currency>
+            <value>89.0</value>
+            <lastUpdate>2018-01-30Z</lastUpdate>
+        </sharePrice>
+    </Share>
+    <Share>
+        <companyName>Sony</companyName>
+        <companySymbol>SNE</companySymbol>
+        <availableShares>8224</availableShares>
+        <sharePrice>
+            <currency>GBP</currency>
+            <value>45.21</value>
+            <lastUpdate>2018-01-30Z</lastUpdate>
+        </sharePrice>
+    </Share>
+    <Share>
+        <companyName>Tesla</companyName>
+        <companySymbol>TSLA</companySymbol>
+        <availableShares>4053777</availableShares>
+        <sharePrice>
+            <currency>GBP</currency>
+            <value>333.0</value>
+            <lastUpdate>2018-01-30Z</lastUpdate>
+        </sharePrice>
+    </Share>
+</Shares>
