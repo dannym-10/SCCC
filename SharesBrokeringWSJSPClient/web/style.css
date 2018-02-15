@@ -1,0 +1,166 @@
+.wrapper {
+    width: 98%;
+    margin: 0 auto;
+    disply: flex;
+    display: -webkit-flex;
+}
+.container-sb {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    width: 100%;
+}
+.sb-currency {
+    width: 55%;
+}
+.container-api{
+    width: 45%;
+}
+
+.sb-table-container {
+
+}
+.sb-all-shares {
+    padding: 10px 3px;
+}
+
+.form-buy-shares {
+    width: 50px;
+}
+
+span.buy-share {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+}
+.sb-buy-item {
+   position: relative;
+}
+.sb-table {
+    text-align: left;
+    border-collapse: collapse;
+}
+.sb-table th,
+.sb-table td {
+    padding: 8px;
+    text-align: center;
+}
+.sb-table-heading {
+    background-color: dimgray;
+    color: #fff; 
+}
+.sb-table-item:hover {
+    background-color: green;
+    color: white;
+    
+}
+
+.button-update-shares {
+    background-color: initial;
+    background-image: url(http://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/Button-Refresh-icon.png);
+    background-size: contain;
+    border: none;
+    font-size: 0;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+    transform: rotate(-360deg);
+}
+
+.button-update-shares:hover  {
+    transition: 1s;
+    transform: rotate(720deg);
+}
+
+
+
+/*Company News Info*/
+.comp-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px grey double;
+}
+
+.comp-info-wrapper:last-child {
+    border: none;
+}
+
+.comp-info-img {
+    width: 30%;
+}
+
+.comp-information {
+    position: relative;
+    width: 70%;
+    padding-left: 15px;
+}
+
+.form-company-info {
+    padding: 25px 0;
+}
+
+.flex-wrapper {
+    display: flex;
+    font-size: 12px;
+    padding-right: 15px;
+    font-style: italic;
+    color: grey;
+    padding-bottom: 10px;
+}
+
+.comp-info-newstitle {
+    font-size: 20px;
+    color: green;
+}
+
+.comp-info-description {
+    
+}
+
+.comp-info-author {
+    padding-right: 20px;
+}
+
+.comp-info-date {
+    
+}
+
+.comp-info-wrapper a {
+    font-size: 14px;
+    text-decoration: none;
+    color: forestgreen;
+    position: absolute;
+    bottom: -10px;
+    right: 2px;
+}
+
+.update-and-currency-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+
+/*Sell shares*/
+.sell-shares-wrapper {
+    padding-top: 35px;
+}
+
+.form-sell-share {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-input-sell-share {
+    width: 26%;
+    
+}

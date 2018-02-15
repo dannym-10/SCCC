@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://SharesBrokering.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://SharesBrokering.org/">
+
+<xs:element name="IOException" type="tns:IOException"/>
+
+<xs:element name="ParseException" type="tns:ParseException"/>
+
+<xs:element name="Shares">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Share" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="buyShares" type="tns:buyShares"/>
+
+<xs:element name="buySharesResponse" type="tns:buySharesResponse"/>
+
+<xs:element name="getAvailableShares" type="tns:getAvailableShares"/>
+
+<xs:element name="getAvailableSharesResponse" type="tns:getAvailableSharesResponse"/>
+
+<xs:element name="getNewsOnline" type="tns:getNewsOnline"/>
+
+<xs:element name="getNewsOnlineResponse" type="tns:getNewsOnlineResponse"/>
+
+<xs:element name="getSharesOnline" type="tns:getSharesOnline"/>
+
+<xs:element name="getSharesOnlineResponse" type="tns:getSharesOnlineResponse"/>
+
+<xs:element name="searchSharePriceOrName" type="tns:searchSharePriceOrName"/>
+
+<xs:element name="searchSharePriceOrNameResponse" type="tns:searchSharePriceOrNameResponse"/>
+
+<xs:element name="sellShare" type="tns:sellShare"/>
+
+<xs:element name="sellShareResponse" type="tns:sellShareResponse"/>
+
+<xs:element name="unmarshalShares" type="tns:unmarshalShares"/>
+
+<xs:element name="unmarshalSharesResponse" type="tns:unmarshalSharesResponse"/>
+
+<xs:element name="updateSharesRefresh" type="tns:updateSharesRefresh"/>
+
+<xs:element name="updateSharesRefreshResponse" type="tns:updateSharesRefreshResponse"/>
+
+<xs:complexType name="searchSharePriceOrName">
+<xs:sequence>
+<xs:element name="searchParameter" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchSharePriceOrNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Share">
+<xs:sequence>
+<xs:element name="companyName" type="xs:string"/>
+<xs:element name="companySymbol" type="xs:string"/>
+<xs:element name="availableShares" type="xs:int"/>
+<xs:element name="sharePrice" type="tns:sharePrice" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sharePrice">
+<xs:sequence>
+<xs:element name="currency" type="xs:string"/>
+<xs:element name="value" type="xs:float"/>
+<xs:element name="lastUpdate" type="xs:date"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAvailableShares">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAvailableSharesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unmarshalShares">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="unmarshalSharesResponse">
+<xs:sequence>
+<xs:element name="return" minOccurs="0">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Share" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSharesOnline">
+<xs:sequence>
+<xs:element name="quandlCodeName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSharesOnlineResponse">
+<xs:sequence>
+<xs:element name="return" minOccurs="0">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Share" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IOException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ParseException">
+<xs:sequence>
+<xs:element name="errorOffset" type="xs:int"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNewsOnline">
+<xs:sequence>
+<xs:element name="companyName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNewsOnlineResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:shareInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="shareInfo">
+<xs:sequence>
+<xs:element name="imageURL" type="xs:string" minOccurs="0"/>
+<xs:element name="newsAuthor" type="xs:string" minOccurs="0"/>
+<xs:element name="newsDescription" type="xs:string" minOccurs="0"/>
+<xs:element name="newsTitle" type="xs:string" minOccurs="0"/>
+<xs:element name="newsURL" type="xs:string" minOccurs="0"/>
+<xs:element name="publishedDate" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sellShare">
+<xs:sequence>
+<xs:element name="companyName" type="xs:string" minOccurs="0"/>
+<xs:element name="companySymbol" type="xs:string" minOccurs="0"/>
+<xs:element name="availableShares" type="xs:int"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+<xs:element name="value" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sellShareResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buyShares">
+<xs:sequence>
+<xs:element name="amount" type="xs:int"/>
+<xs:element name="sharesSymbol" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buySharesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSharesRefresh">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateSharesRefreshResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:Share" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
